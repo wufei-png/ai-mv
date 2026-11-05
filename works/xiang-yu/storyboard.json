@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "sourceStartFrame": 2097,
+  "sourceEndFrame": 2724,
+  "durationFrames": 627,
+  "shots": [
+    {"id": "camp-wide", "startFrame": 0, "endFrame": 163, "description": "A quiet shared moment in the camp."},
+    {"id": "camp-farewell", "startFrame": 163, "endFrame": 320, "description": "The characters lower their gaze before parting."},
+    {"id": "river-farewell", "startFrame": 320, "endFrame": 480, "description": "The scene moves to the riverbank."},
+    {"id": "river-distance", "startFrame": 480, "endFrame": 627, "description": "The warrior turns toward the river as the light fades."}
+  ]
+}

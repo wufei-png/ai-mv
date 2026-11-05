@@ -1,0 +1,17 @@
+node_modules/
+.local/
+.hyperframes/
+dist/
+renders/
+engines/remotion/public/
+engines/hyperframes/assets/runtime/
+.DS_Store
+*.flac
+*.mp3
+*.wav
+*.m4a
+*.lrc
+*.srt
+*.mp4
+*.mov
+*.webm

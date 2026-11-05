@@ -1,0 +1,27 @@
+* { box-sizing: border-box; }
+html, body { margin: 0; width: 100%; height: 100%; background: #101522; overflow: hidden; }
+#main, #stage { position: relative; width: 1920px; height: 1080px; overflow: hidden; color: #f3e8d2; }
+#world { position: absolute; inset: 0; transform-origin: center; }
+#camp, #river { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+#river { opacity: 0; }
+#closeup { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; }
+.side-shade { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(10,14,25,.15), transparent 38%, rgba(10,14,25,.1)); }
+.actor { position: absolute; top: 313px; width: 372px; height: 496px; }
+.pose { position: absolute; inset: 0; background-image: url('assets/runtime/characters-v001.png'); background-size: 400% 200%; background-repeat: no-repeat; image-rendering: pixelated; }
+#warrior { left: 555px; }
+#woman { left: 995px; }
+#warrior-side { background-position: 33.333333% 0%; }
+#warrior-bow { background-position: 66.666667% 0%; opacity: 0; }
+#warrior-back { background-position: 100% 0%; opacity: 0; }
+#woman-side { background-position: 33.333333% 100%; }
+#woman-bow { background-position: 66.666667% 100%; opacity: 0; }
+#embers { position: absolute; inset: 0; pointer-events: none; }
+.ember { position: absolute; background: #e0ab73; }
+#title { position: absolute; top: 105px; left: 155px; opacity: 0; font: 42px 'Noto Serif SC Variable', serif; letter-spacing: 12px; color: #e2c9a3; text-shadow: 0 2px 12px #101522; }
+#title span { font-size: 30px; letter-spacing: 4px; margin-left: 18px; }
+#caption-area { position: absolute; left: 10%; width: 80%; bottom: 110px; height: 80px; text-align: center; }
+.caption { position: absolute; inset: 0; opacity: 0; font-family: 'Noto Serif SC Variable', serif; font-size: 58px; font-weight: 600; letter-spacing: 3px; line-height: 1.35; color: #f4eddd; text-shadow: 0 3px 8px #080a10, 0 1px 2px #080a10; }
+.letterbox { position: absolute; left: 0; right: 0; height: 24px; background: #090d16; }
+.letterbox.top { top: 0; }
+.letterbox.bottom { bottom: 0; }
+#ending { position: absolute; inset: 0; background: #090d16; opacity: 0; pointer-events: none; }
