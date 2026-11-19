@@ -20,6 +20,13 @@ npm ci
 npm run check
 ```
 
+`npm run check:ci` runs the TypeScript, Node syntax and tracked synthetic tests
+used by CI; it does not depend on local media or work-specific fixtures. Tracked
+test files must be named `*.synthetic.test.mjs` to run in CI or
+`*.local.test.mjs` to be skipped deliberately; an unclassified tracked test
+fails the gate instead of being omitted silently. `npm run check` also picks up
+any local test files under `tests/`, regardless of that classification.
+
 Provide your own recording and timed LRC file. The preparation step writes
 only ignored local media and runtime copies, records the source hashes locally,
 and refuses to replace a different existing study:

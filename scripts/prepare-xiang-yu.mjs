@@ -6,6 +6,7 @@ import {
 import {dirname, join, resolve} from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {clipLrc} from './lrc.mjs';
+import {assertStoryboardAlignment} from './storyboard.mjs';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const [sourceArg, lyricsArg] = process.argv.slice(2);
@@ -18,9 +19,7 @@ const source = resolve(sourceArg);
 const lyrics = resolve(lyricsArg);
 const spec = JSON.parse(readFileSync(join(root, 'works/xiang-yu/storyboard.json'), 'utf8'));
 const sampleRate = 48000;
-if (sampleRate % spec.fps !== 0 || spec.sourceEndFrame - spec.sourceStartFrame !== spec.durationFrames) {
-  throw new Error('Storyboard is not aligned to the audio sample clock.');
-}
+assertStoryboardAlignment(spec, {sampleRate});
 const startSample = spec.sourceStartFrame * sampleRate / spec.fps;
 const endSample = spec.sourceEndFrame * sampleRate / spec.fps;
 const startSeconds = spec.sourceStartFrame / spec.fps;
