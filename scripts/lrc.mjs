@@ -19,3 +19,10 @@ export function clipLrc(content, {startSeconds, endSeconds, fps, durationFrames}
   }
   return cues;
 }
+
+export function fullSongCues(content, {fps, durationFrames, lyricStartSeconds}) {
+  const cues = clipLrc(content, {startSeconds: 0, endSeconds: durationFrames / fps, fps, durationFrames})
+    .filter((cue) => cue.startFrame >= Math.ceil(lyricStartSeconds * fps - 1e-7));
+  if (!cues.length) throw new Error('No timed lyrics remain after the credits.');
+  return cues;
+}
