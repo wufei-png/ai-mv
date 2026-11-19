@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "fps": 24,
+  "width": 1280,
+  "height": 720,
+  "sourceStartFrame": 120,
+  "sourceEndFrame": 360,
+  "durationFrames": 240,
+  "shots": [
+    {
+      "id": "opening",
+      "startFrame": 0,
+      "endFrame": 96,
+      "description": "Synthetic opening shot for the validator test."
+    },
+    {
+      "id": "close",
+      "startFrame": 96,
+      "endFrame": 240,
+      "description": "Synthetic closing shot for the validator test."
+    }
+  ]
+}

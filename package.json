@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "check": "tsc --noEmit && node --test tests/*.test.mjs && node --check engines/hyperframes/scene.js",
+    "check:ci": "tsc --noEmit && node scripts/check-syntax.mjs && node --test tests/lrc.test.mjs tests/lyric-emphasis.test.mjs tests/hyperframes-captions.test.mjs tests/storyboard.test.mjs",
     "prepare:xiang-yu": "node scripts/prepare-xiang-yu.mjs",
     "check:inputs": "node scripts/check-inputs.mjs",
     "compare:xiang-yu": "node scripts/compare-local.mjs"
